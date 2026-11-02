@@ -287,21 +287,30 @@ export default function Home() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-2xl">
-                  Job Manager
-                </h3>
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <h3 className="text-2xl">
+                    Job Manager
+                  </h3>
+
+                  <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-300">
+                    Interactive Demo
+                  </span>
+                </div>
 
                 <p className="card-text">
                   A full-stack business management application for
                   managing customers, jobs and business information
-                  in one place.
+                  in one place. Try adding fictional customers and jobs
+                  using the live demo.
                 </p>
 
                 <a
-                  href="#contact"
+                  href="https://job-manager-ashen.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-6 inline-flex font-semibold text-blue-400 transition hover:text-blue-300"
                 >
-                  View project →
+                  Launch live demo →
                 </a>
               </div>
             </article>
