@@ -13,9 +13,38 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Colin Anderson | Freelance Web Developer",
+  metadataBase: new URL("https://colinwebdesign.com"),
+
+  title: "Web Design & Development in Livingston | Colin Anderson",
+
   description:
-    "Modern websites and web applications built for businesses.",
+    "Freelance web designer and developer based in Livingston, West Lothian. I build modern business websites and custom web applications across Scotland.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Colin Anderson | Web Design & Development in Livingston",
+    description:
+      "Modern business websites and web applications, built by an independent freelance developer in Livingston, West Lothian.",
+    url: "https://colinwebdesign.com",
+    siteName: "Colin Anderson Web Design",
+    locale: "en_GB",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Colin Anderson | Web Design & Development",
+    description:
+      "Freelance web designer and developer based in Livingston, West Lothian.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
