@@ -354,7 +354,7 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2">
+          <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
             {/* Job Manager */}
             <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-950">
@@ -468,6 +468,48 @@ export default function Home() {
                   className="mt-6 inline-flex font-semibold text-purple-400 transition hover:text-purple-300"
                 >
                   View project →
+                </a>
+              </div>
+            </article>
+
+            {/* Feel Good */}
+            <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-950">
+              <div className="h-72 overflow-hidden bg-[#edf3e9]">
+                <img
+                  src="/feel-good.png"
+                  alt="Screenshot of the Feel Good wellbeing app"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="p-8">
+                <div className="flex flex-wrap gap-2">
+                  <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-300">
+                    Next.js
+                  </span>
+                  <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-300">
+                    React
+                  </span>
+                  <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-300">
+                    Tailwind CSS
+                  </span>
+                </div>
+
+                <h3 className="mt-5 text-2xl">Feel Good</h3>
+
+                <p className="card-text">
+                  A calming wellbeing app featuring mood check-ins,
+                  positive reminders, daily reflections and an
+                  interactive guided breathing exercise.
+                </p>
+
+                <a
+                  href="https://feel-goodizer.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex font-semibold text-green-400 transition hover:text-green-300"
+                >
+                  View live app →
                 </a>
               </div>
             </article>
