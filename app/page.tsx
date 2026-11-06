@@ -250,24 +250,12 @@ export default function Home() {
             {/* Job Manager */}
             <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-950">
 
-              <div className="flex h-72 items-center justify-center bg-gradient-to-br from-blue-500/20 via-slate-900 to-slate-950">
-
-                <div className="w-4/5 rounded-xl border border-slate-700 bg-slate-900 p-5 shadow-2xl transition duration-500 group-hover:scale-105">
-
-                  <div className="mb-4 flex items-center justify-between">
-                    <div className="h-3 w-24 rounded bg-slate-700" />
-                    <div className="h-6 w-6 rounded-full bg-blue-500/30" />
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="h-20 rounded-lg bg-slate-800" />
-                    <div className="h-20 rounded-lg bg-slate-800" />
-                    <div className="h-20 rounded-lg bg-slate-800" />
-                  </div>
-
-                  <div className="mt-4 h-3 w-2/3 rounded bg-slate-800" />
-                  <div className="mt-2 h-3 w-1/2 rounded bg-slate-800" />
-                </div>
+              <div className="overflow-hidden bg-slate-900">
+                <img
+                  src="/jobmanager.png"
+                  alt="Job Manager dashboard showing live customer and job statistics"
+                  className="h-72 w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                />
               </div>
 
 
