@@ -5,121 +5,169 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
 
       {/* Navigation */}
-      <nav className="relative container-site flex items-center justify-between py-6">
-        <div className="text-xl font-bold">
-          Colin<span className="text-blue-400">.</span>
+      <nav className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
+        <div className="container-site flex items-center justify-between py-5">
+          <a href="#" className="text-2xl font-bold tracking-tight">
+            Colin<span className="text-blue-400">.</span>
+          </a>
+
+          <div className="hidden items-center gap-9 text-sm text-slate-300 md:flex">
+            <a href="#services" className="transition hover:text-blue-400">Services</a>
+            <a href="#work" className="transition hover:text-blue-400">My Work</a>
+            <a href="#about" className="transition hover:text-blue-400">About</a>
+            <a href="#contact" className="transition hover:text-blue-400">Contact</a>
+          </div>
+
+          <div className="hidden md:block">
+            <a href="#contact" className="btn-primary px-6 py-3 text-sm">
+              Let's Talk <span className="ml-2">↗</span>
+            </a>
+          </div>
+
+          <MobileMenu />
         </div>
-
-        <div className="hidden gap-8 text-sm text-slate-300 md:flex">
-          <a href="#services" className="transition hover:text-white">
-            Services
-          </a>
-
-          <a href="#work" className="transition hover:text-white">
-            My Work
-          </a>
-
-          <a href="#about" className="transition hover:text-white">
-            About
-          </a>
-
-          <a href="#contact" className="transition hover:text-white">
-            Contact
-          </a>
-        </div>
-
-        <div className="hidden md:block">
-          <a href="#contact" className="btn-primary px-5 py-2.5 text-sm">
-            Let's Talk
-          </a>
-        </div>
-
-        <MobileMenu />
       </nav>
 
       {/* Hero */}
-      <section className="container-site grid min-h-[80vh] items-center gap-16 py-20 lg:grid-cols-2">
+      <section className="relative isolate overflow-hidden border-b border-white/5">
+        <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-blue-600/20 blur-[120px]" />
+        <div className="pointer-events-none absolute right-0 top-20 h-96 w-96 rounded-full bg-indigo-500/10 blur-[120px]" />
 
-        <div>
-          <p className="eyebrow mb-6">
-            Freelance Web Developer
-          </p>
+        <div className="container-site relative grid min-h-[760px] items-center gap-16 py-24 lg:grid-cols-[1.05fr_0.95fr]">
 
-          <h1 className="max-w-4xl">
-            Websites that help your business
-            <span className="text-blue-400"> stand out.</span>
-          </h1>
-
-          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400 md:text-xl">
-            I design and build modern, responsive websites and web
-            applications for businesses that want a professional online
-            presence without the agency price tag.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#contact" className="btn-primary">
-              Start a Project
-            </a>
-
-            <a href="#work" className="btn-secondary">
-              View My Work
-            </a>
-          </div>
-        </div>
-
-
-        {/* Code window */}
-        <div className="relative">
-          <div className="absolute -inset-4 rounded-3xl bg-blue-500/10 blur-3xl" />
-
-          <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
-
-            <div className="flex items-center gap-2 border-b border-slate-800 px-5 py-4">
-              <div className="h-3 w-3 rounded-full bg-red-400" />
-              <div className="h-3 w-3 rounded-full bg-yellow-400" />
-              <div className="h-3 w-3 rounded-full bg-green-400" />
-
-              <span className="ml-4 text-xs text-slate-500">
-                website.tsx
+          <div className="relative z-10">
+            <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-blue-400/20 bg-blue-400/5 px-4 py-2">
+              <span className="h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.9)]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">
+                Livingston · West Lothian · Scotland
               </span>
             </div>
 
-            <div className="p-6 font-mono text-sm leading-7">
-              <p>
-                <span className="text-purple-400">const</span>{" "}
-                <span className="text-blue-300">website</span> = {"{"}
-              </p>
+            <p className="eyebrow mb-6">
+              Independent web design & development
+            </p>
 
-              <p className="pl-6">
-                <span className="text-slate-500">business:</span>{" "}
-                <span className="text-green-300">"Your Business"</span>,
-              </p>
+            <h1 className="max-w-3xl">
+              Websites built for
+              <span className="block bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                businesses like yours.
+              </span>
+            </h1>
 
-              <p className="pl-6">
-                <span className="text-slate-500">design:</span>{" "}
-                <span className="text-green-300">"Modern"</span>,
-              </p>
+            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400 md:text-xl">
+              I'm a web developer based in Livingston, helping local
+              businesses across West Lothian build a stronger presence
+              online. Thoughtful design, modern technology and a
+              personal service — without the agency price tag.
+            </p>
 
-              <p className="pl-6">
-                <span className="text-slate-500">responsive:</span>{" "}
-                <span className="text-orange-300">true</span>,
-              </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#contact" className="btn-primary">
+                Let's build something <span className="ml-2">↗</span>
+              </a>
 
-              <p className="pl-6">
-                <span className="text-slate-500">fast:</span>{" "}
-                <span className="text-orange-300">true</span>,
-              </p>
+              <a href="#work" className="btn-secondary">
+                Explore my work <span className="ml-2">↓</span>
+              </a>
+            </div>
 
-              <p className="pl-6">
-                <span className="text-slate-500">builtWith:</span>{" "}
-                <span className="text-green-300">"Next.js"</span>
-              </p>
+            <div className="mt-14 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-7 text-sm text-slate-400">
+              <span className="flex items-center gap-2">
+                <span className="text-blue-400">✦</span> Personal, direct service
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-blue-400">✦</span> Built around your business
+              </span>
+            </div>
+          </div>
 
-              <p>{"}"}</p>
+          {/* PlayStation-inspired project interface */}
+          <div className="relative mx-auto w-full max-w-xl">
+            <div className="absolute inset-8 rounded-full bg-blue-500/20 blur-[90px]" />
 
-              <p className="mt-4">
-                <span className="text-purple-400">export default</span>{" "}
-                <span className="text-blue-300">website</span>;
+            <div className="relative rotate-1 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80 p-4 shadow-2xl shadow-blue-950/50 backdrop-blur-xl sm:p-6">
+
+              <div className="flex items-center justify-between border-b border-white/10 px-2 pb-5">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-400">
+                    Independent developer
+                  </p>
+                  <p className="mt-1 text-sm text-slate-300">
+                    Digital work, made personal.
+                  </p>
+                </div>
+                <div className="flex gap-1.5">
+                  <span className="h-2 w-2 rounded-full bg-blue-400" />
+                  <span className="h-2 w-2 rounded-full bg-blue-400/40" />
+                  <span className="h-2 w-2 rounded-full bg-blue-400/20" />
+                </div>
+              </div>
+
+              <div className="group relative mt-5 overflow-hidden rounded-2xl border border-blue-400/30 bg-gradient-to-br from-blue-600 via-blue-800 to-slate-950 p-7 sm:p-9">
+                <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full border border-white/10" />
+                <div className="absolute -right-2 top-8 h-32 w-32 rounded-full border border-white/10" />
+
+                <div className="relative">
+                  <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-100">
+                    Featured project
+                  </span>
+
+                  <h3 className="mt-10 text-3xl font-bold text-white sm:text-4xl">
+                    Job Manager
+                  </h3>
+
+                  <p className="mt-3 max-w-xs text-sm leading-6 text-blue-100/80">
+                    A custom business management application, designed and built from the ground up.
+                  </p>
+
+                  <div className="mt-8 flex items-center justify-between">
+                    <span className="text-xs font-medium text-blue-100/70">
+                      Next.js · TypeScript · MariaDB
+                    </span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-xl text-white transition group-hover:bg-white group-hover:text-blue-700">
+                      ↗
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                  <span className="text-2xl text-blue-400">⌘</span>
+                  <p className="mt-4 text-sm font-semibold text-white">
+                    Web applications
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                    Tools that make work easier.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                  <span className="text-2xl text-blue-400">✧</span>
+                  <p className="mt-4 text-sm font-semibold text-white">
+                    Business websites
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-slate-500">
+                    Stand out from the crowd.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
+                <div>
+                  <p className="text-xs text-slate-500">Your local web developer</p>
+                  <p className="mt-1 text-sm font-medium text-white">
+                    Livingston, West Lothian
+                  </p>
+                </div>
+                <span className="text-2xl text-blue-400">⌖</span>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-6 -left-5 hidden rounded-xl border border-white/10 bg-slate-900/90 px-5 py-3 shadow-xl backdrop-blur-xl sm:block">
+              <p className="text-xs text-slate-500">Based locally</p>
+              <p className="mt-1 text-sm font-semibold text-white">
+                Built in West Lothian.
               </p>
             </div>
           </div>
@@ -128,91 +176,152 @@ export default function Home() {
 
 
       {/* Services */}
-      <section id="services" className="section bg-slate-950">
-        <div className="container-site">
+      <section id="services" className="section relative overflow-hidden bg-slate-950">
+        <div className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full bg-blue-600/10 blur-[120px]" />
 
+        <div className="container-site relative">
           <div className="section-heading">
-            <p className="eyebrow">
-              What I do
-            </p>
-
+            <p className="eyebrow">What I bring to the table</p>
             <h2>
-              Everything you need to build your online presence.
+              Digital solutions designed around
+              <span className="text-blue-400"> your business.</span>
             </h2>
-
             <p className="section-description">
-              From simple business websites to custom web applications,
-              I can design and build a solution around what your business
-              actually needs.
+              Whether you're starting from scratch or improving what
+              you've already got, I'll help turn your ideas into
+              something useful, professional and built to last.
             </p>
           </div>
 
-
-          <div className="mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-
-            <div className="card card-hover">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
-                🌐
+          <div className="mt-16 grid gap-4 md:grid-cols-2">
+            <article className="group relative overflow-hidden rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-slate-900/50 p-8 transition duration-300 hover:-translate-y-1 hover:border-blue-400/50">
+              <div className="flex items-start justify-between">
+                <span className="text-sm font-semibold tracking-[0.2em] text-blue-400">01 / WEB DESIGN</span>
+                <span className="text-3xl text-blue-400">◈</span>
               </div>
-
-              <h3 className="mt-6">
-                Business Websites
-              </h3>
-
-              <p className="card-text">
-                Modern, responsive websites designed to make your
-                business look professional and attract new customers.
+              <h3 className="mt-10 text-2xl">Business websites</h3>
+              <p className="card-text max-w-md">
+                Make a great first impression with a modern, responsive
+                website that showcases your business and helps customers
+                find what they're looking for.
               </p>
-            </div>
-
-
-            <div className="card card-hover">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
-                ⚙️
+              <div className="mt-8 text-xs font-medium uppercase tracking-widest text-slate-500">
+                Design · Responsive layouts · SEO foundations
               </div>
+            </article>
 
-              <h3 className="mt-6">
-                Web Applications
-              </h3>
-
-              <p className="card-text">
-                Custom online tools, dashboards and systems that
-                help businesses manage their work more efficiently.
-              </p>
-            </div>
-
-
-            <div className="card card-hover">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
-                ✨
+            <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-400/[0.04]">
+              <div className="flex items-start justify-between">
+                <span className="text-sm font-semibold tracking-[0.2em] text-blue-400">02 / DEVELOPMENT</span>
+                <span className="text-3xl text-blue-400">⌘</span>
               </div>
-
-              <h3 className="mt-6">
-                Website Redesigns
-              </h3>
-
-              <p className="card-text">
-                Give an outdated website a fresh, modern design
-                that works beautifully across phones, tablets and desktops.
+              <h3 className="mt-10 text-2xl">Web applications</h3>
+              <p className="card-text max-w-md">
+                Go beyond a standard website with custom dashboards,
+                management tools and online systems built around the
+                way you work.
               </p>
-            </div>
-
-
-            <div className="card card-hover">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
-                🛠️
+              <div className="mt-8 text-xs font-medium uppercase tracking-widest text-slate-500">
+                Next.js · React · Databases · Custom functionality
               </div>
+            </article>
 
-              <h3 className="mt-6">
-                Ongoing Support
-              </h3>
-
-              <p className="card-text">
-                Need changes after launch? I can help keep your
-                website updated, secure and running smoothly.
+            <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-400/[0.04]">
+              <div className="flex items-start justify-between">
+                <span className="text-sm font-semibold tracking-[0.2em] text-blue-400">03 / REFRESH</span>
+                <span className="text-3xl text-blue-400">✧</span>
+              </div>
+              <h3 className="mt-10 text-2xl">Website redesigns</h3>
+              <p className="card-text max-w-md">
+                Give an existing website a new lease of life with a
+                cleaner design, better user experience and a layout
+                that works beautifully on every screen.
               </p>
-            </div>
+              <div className="mt-8 text-xs font-medium uppercase tracking-widest text-slate-500">
+                Modernisation · User experience · Visual design
+              </div>
+            </article>
 
+            <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-8 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-400/[0.04]">
+              <div className="flex items-start justify-between">
+                <span className="text-sm font-semibold tracking-[0.2em] text-blue-400">04 / ONGOING CARE</span>
+                <span className="text-3xl text-blue-400">↗</span>
+              </div>
+              <h3 className="mt-10 text-2xl">Support & improvements</h3>
+              <p className="card-text max-w-md">
+                Your website shouldn't stand still after launch.
+                I can help with updates, improvements and keeping
+                things running smoothly.
+              </p>
+              <div className="mt-8 text-xs font-medium uppercase tracking-widest text-slate-500">
+                Updates · Maintenance · New features
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Local to Livingston */}
+      <section className="relative isolate overflow-hidden border-y border-blue-400/10 bg-gradient-to-r from-blue-950/60 via-slate-950 to-slate-950 py-24">
+        <div className="pointer-events-none absolute -left-20 top-0 h-80 w-80 rounded-full bg-blue-500/15 blur-[110px]" />
+
+        <div className="container-site relative grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Local knowledge. Personal service.</p>
+            <h2 className="mt-5 max-w-2xl">
+              Good things are being built
+              <span className="text-blue-400"> right here in West Lothian.</span>
+            </h2>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-400">
+              I'm an independent web developer based in Livingston,
+              working with businesses and individuals across West Lothian
+              and beyond. You deal directly with me throughout your
+              project — from the first conversation to launch and beyond.
+            </p>
+            <p className="mt-5 max-w-2xl leading-7 text-slate-400">
+              Whether you're a local business looking to get online,
+              or an established company ready for something better,
+              I'd love to hear what you're working on.
+            </p>
+            <a href="#contact" className="btn-primary mt-9 inline-flex">
+              Let's talk about your project <span className="ml-2">↗</span>
+            </a>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-7 shadow-2xl shadow-blue-950/30 backdrop-blur-xl sm:p-9">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-400">
+              Your local web developer
+            </p>
+            <div className="mt-8 flex items-center gap-5">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-400/10 text-3xl text-blue-300">
+                ⌖
+              </div>
+              <div>
+                <h3 className="text-2xl">Livingston</h3>
+                <p className="mt-1 text-sm text-slate-400">West Lothian, Scotland</p>
+              </div>
+            </div>
+            <div className="my-8 h-px bg-white/10" />
+            <div className="space-y-5">
+              <div>
+                <p className="font-semibold text-white">Direct communication</p>
+                <p className="mt-1 text-sm leading-6 text-slate-400">
+                  Speak directly with the person designing and building your website.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-white">Local and independent</p>
+                <p className="mt-1 text-sm leading-6 text-slate-400">
+                  A personal service for Livingston, West Lothian and businesses further afield.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-white">No unnecessary complexity</p>
+                <p className="mt-1 text-sm leading-6 text-slate-400">
+                  Straightforward conversations, clear communication and solutions that fit.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -373,107 +482,97 @@ export default function Home() {
         <div className="container-site grid gap-16 lg:grid-cols-2 lg:items-center">
 
           <div>
-
             <div className="section-heading">
-              <p className="eyebrow">
-                About me
-              </p>
+              <p className="eyebrow">A little about me</p>
 
               <h2>
-                A developer who understands both design and technology.
+                Design knowledge. Technical skills. A personal approach.
               </h2>
             </div>
 
-
             <div className="mt-8 space-y-5 text-lg leading-8 text-slate-400">
-
               <p>
-                I'm Colin, a freelance web developer based in Scotland.
-                I design and build modern websites and web applications
-                for businesses and individuals.
+                I'm Colin, a freelance web developer based in Livingston,
+                West Lothian. I build modern websites and web applications
+                for businesses and individuals who want a strong online presence.
               </p>
 
               <p>
-                With a background in web design, graphic design and
-                technical problem solving, I care about more than just
-                making a website look good. It needs to be fast, easy to
-                use and work properly.
+                I graduated from Edinburgh Napier University with an Honours
+                degree in Web Design and Development. That combination of
+                design and development means I think about how a website looks,
+                how it works and how people actually use it.
               </p>
 
               <p>
-                I work directly with my clients from the initial idea
-                through to launch, keeping things straightforward and
-                making sure the finished website does what you need it
-                to do.
+                Alongside my development work, I have over three years'
+                experience using Adobe Creative Suite, including Photoshop
+                and Illustrator. I bring that design experience into the
+                websites I build, paying attention to the details that make
+                a site feel polished and professional.
               </p>
 
+              <p>
+                When you work with me, you deal directly with the person
+                designing and building your website. No jargon, no unnecessary
+                complications — just a straightforward process and a result
+                built around what your business needs.
+              </p>
             </div>
 
             <a href="#contact" className="btn-primary mt-8 inline-flex">
-              Work with me
+              Let's work together
             </a>
           </div>
 
-
-          {/* Stats */}
+          {/* About highlights */}
           <div className="grid gap-4 sm:grid-cols-2">
 
-            <div className="card">
+            <div className="card card-hover">
               <div className="text-3xl font-bold text-blue-400">
                 3+
               </div>
-
               <p className="mt-2 font-medium">
                 Years of design experience
               </p>
-
               <p className="mt-3 text-sm leading-6 text-slate-500">
-                Working with graphics, layouts and digital content.
+                Adobe Photoshop, Illustrator and digital design.
               </p>
             </div>
 
+            <div className="card card-hover">
+              <div className="text-3xl font-bold text-blue-400">
+                BSc (Hons)
+              </div>
+              <p className="mt-2 font-medium">
+                Web Design and Development
+              </p>
+              <p className="mt-3 text-sm leading-6 text-slate-500">
+                Graduate of Edinburgh Napier University.
+              </p>
+            </div>
 
-            <div className="card">
+            <div className="card card-hover">
               <div className="text-3xl font-bold text-blue-400">
                 Full Stack
               </div>
-
               <p className="mt-2 font-medium">
                 Web development
               </p>
-
               <p className="mt-3 text-sm leading-6 text-slate-500">
                 Frontend, backend and database development.
               </p>
             </div>
 
-
-            <div className="card">
+            <div className="card card-hover">
               <div className="text-3xl font-bold text-blue-400">
-                100%
+                Livingston
               </div>
-
               <p className="mt-2 font-medium">
-                Direct communication
+                Local and independent
               </p>
-
               <p className="mt-3 text-sm leading-6 text-slate-500">
-                You work directly with the person building your website.
-              </p>
-            </div>
-
-
-            <div className="card">
-              <div className="text-3xl font-bold text-blue-400">
-                Scotland
-              </div>
-
-              <p className="mt-2 font-medium">
-                Based locally
-              </p>
-
-              <p className="mt-3 text-sm leading-6 text-slate-500">
-                Available for projects across Scotland and beyond.
+                Working with businesses across West Lothian, Scotland and beyond.
               </p>
             </div>
 
